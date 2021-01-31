@@ -36,7 +36,7 @@ function App() {
         <Col>
           <Jumbotron>
             <h1>
-              Landdox Code Challenge <Icon icon="smile" />
+              Coatí Labs Code Challenge <Icon icon="smile" />
             </h1>
           </Jumbotron>
         </Col>
