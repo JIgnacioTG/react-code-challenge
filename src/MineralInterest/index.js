@@ -3,11 +3,12 @@ import { Button, FormControl, InputGroup } from 'react-bootstrap';
 
 import Icon from '../Icon';
 
-const MineralInterest = ({ value, onChange }) => {
+const MineralInterest = ({ value, onChange, indexMi }) => {
   return (
     <tr data-testid={'mineralInterest-' + value.id}>
       <td>
         <input
+          id={'mineralInterest-' + indexMi + '-owner'}
           data-testid={'mineralInterest-' + value.id + '.owner'}
           name="owner"
           type="text"
@@ -22,7 +23,8 @@ const MineralInterest = ({ value, onChange }) => {
       <td>
         <InputGroup className="mb-3">
           <FormControl
-            id={'mineralInterest-' + value.id + '.interest'}
+            id={'mineralInterest-' + indexMi + '-interest'}
+            data-testid={'mineralInterest-' + value.id + '.interest'}
             name="interest"
             placeholder="0"
             aria-label="0"
@@ -38,6 +40,7 @@ const MineralInterest = ({ value, onChange }) => {
       <td></td>
       <td>
         <input
+          id={'mineralInterest-' + indexMi + '-lease'}
           data-testid={'mineralInterest-' + value.id + '.lease'}
           name="lease"
           type="text"
@@ -51,6 +54,7 @@ const MineralInterest = ({ value, onChange }) => {
       </td>
       <td>
         <Button
+          id={'mineralInterest-' + indexMi + '-remove'}
           data-testid={'mineralInterest-' + value.id + '.remove'}
           name="remove"
           variant="light"

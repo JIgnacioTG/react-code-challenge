@@ -3,17 +3,18 @@ import { Button, FormControl, InputGroup } from 'react-bootstrap';
 
 import Icon from '../Icon';
 
-const Npri = ({ value, onChange }) => {
+const Npri = ({ value, onChange, indexMi, indexNp }) => {
   return (
     <tr data-testid={'npri-' + value.id}>
       <td>
         <InputGroup className="mb-3">
           <InputGroup.Prepend>
             <InputGroup.Text id="basic-addon2">
-              <Icon syle={{ paddingRight: '20px' }} icon="indent" />
+              <Icon icon="indent" />
             </InputGroup.Text>
           </InputGroup.Prepend>
           <FormControl
+            id={'npri-' + indexMi + '-' + indexNp + '-owner'}
             data-testid={'npri-' + value.id + '.owner'}
             name="owner"
             placeholder="Owner"
@@ -28,6 +29,7 @@ const Npri = ({ value, onChange }) => {
       <td>
         <InputGroup className="mb-3">
           <FormControl
+            id={'npri-' + indexMi + '-' + indexNp + '-interest'}
             data-testid={'npri-' + value.id + '.interest'}
             name="interest"
             placeholder="0"
@@ -44,6 +46,7 @@ const Npri = ({ value, onChange }) => {
       <td></td>
       <td>
         <Button
+          id={'npri-' + indexMi + '-' + indexNp + '-remove'}
           data-testid={'npri-' + value.id + '.remove'}
           name="remove"
           variant="light"
